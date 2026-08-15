@@ -1,0 +1,27 @@
+{
+  "name": "namasty-react",
+  "version": "1.0.0",
+  "description": "This is Namasty React by SONAKSHI",
+  "keywords": [
+    "Sonakshi",
+    "react"
+  ],
+  "homepage": "https://github.com/hisonakshi/Namasty_React#readme",
+  "bugs": {
+    "url": "https://github.com/hisonakshi/Namasty_React/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hisonakshi/Namasty_React.git"
+  },
+  "license": "ISC",
+  "author": "Sonakshi Agrawal",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.4"
+  }
+}
