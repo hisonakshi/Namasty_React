@@ -1,9 +1,12 @@
+import {LOGO_URL} from "../utils/constants.js";
+import {CART_URL} from "../utils/constants.js";
+
 export const Header = () => {
     return (
         <div className = "header">
 
             <div className = "logo">
-                <img src = "https://st.perplexity.ai/estatic/0b226c450798410ac541646c86ec31afd840e5beab817a5d84fa821e7db61981ec84c3b4a3f072a7a2e1899c9fb06c6e1c2bdf3cee1959c53dcb294ac2e516abcb7faee8b3f3b179ef4b94d2249ec702f137af094249fb575593bb3a6886c88d270b03aad8a94a17557b05187d6d509e" />
+                <img src = {LOGO_URL}/>
             </div>
 
             <div className = "NavbarItems">
@@ -11,7 +14,7 @@ export const Header = () => {
                   <li>Home</li>
                   <li>About</li>
                   <li>Contact Us</li>
-                  <li> <img src=" https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/fd72e189-5d4f-5086-8da0-42229ff858bb/9a8e3356-a617-5b32-b5b2-95f53497146b.jpg"/> </li>
+                  <li> <img src= {CART_URL}/> </li>
                 </ul>
             </div>
 
