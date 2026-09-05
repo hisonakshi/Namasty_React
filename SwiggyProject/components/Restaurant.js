@@ -7,9 +7,9 @@ export const RestauntCard = ({resData}) => {
         <div className="res-card">
            <img src={CDN_URL+ `${resData.info.cloudinaryImageId}`} alt={resData.info.name} />
             <h3>{name}</h3> 
-            <h4>{cuisines.join(",")}</h4>
-            <h5>{avgRating}</h5> <br/>
-            <h5>{locality}</h5>
+            <h4>{cuisines.join(",")}</h4><br/>
+            <h5>Rating : {avgRating}</h5>
+            <h5>Location : {locality}</h5>
         </div>
     )
 }
