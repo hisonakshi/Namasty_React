@@ -46,16 +46,6 @@
     padding: 30px 40px;
 }
 
-/* Search box */
-
-.search {
-    border: 1px solid #6d696998;
-    width: 400px;
-    padding: 10px;
-    margin-bottom: 30px;
-    border-radius:5px
-}
-
 /* Restaurant container */
 
 .res-container {
@@ -85,10 +75,13 @@
     border-radius: 1px;
 }
 
-.res-card h3,h4 {
+.res-card h3,
+.res-card h4 {
     margin-top: 7px;
-    text-align:center;
+    text-align: center;
     font-size: 18px;
+    overflow-wrap: break-word;
+
 }
 
 .res-card h5 {
@@ -120,4 +113,32 @@
 .login{
     padding:8px;
     cursor:pointer;
+}
+
+
+
+/* Search box */
+/* 
+.search {
+    border: 1px solid #6d696998;
+    width: 400px;
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius:5px
+} */
+
+.search{
+    margin-bottom:19px;
+}
+
+.search-box{
+    padding:7px;
+    cursor:pointer;
+}
+.search-btn{
+    padding:7px;
+}
+.filter{
+    display:flex;
+    gap:920px;
 }
