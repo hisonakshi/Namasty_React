@@ -6,14 +6,14 @@ import {About} from "./components/About";
 import {Contact} from "./components/Contact";
 import {Error} from "./components/Error";
 
-import {createBrowserRouter , RouterProvider} from "react-router-dom";
+import {createBrowserRouter , RouterProvider , Outlet} from "react-router-dom";
 
 /* structure in README.md */
 const AppLayout = () => {
     return(
         <div className = "App">
             <Header/>
-            <Body/>
+            <Outlet/>
         </div>
     )
 }
@@ -22,15 +22,21 @@ const appRouter = createBrowserRouter([
     {
         path:"/",
         element:<AppLayout/>,
+        children:[
+            {
+                path:"/",
+                element:<Body/>,
+            },
+            {
+                path:"/about",
+                element:<About/>,
+            },
+            {
+                path:"/contact",
+                element:<Contact/>
+            },
+        ],
         errorElement:<Error/>
-    },
-    {
-        path:"/about",
-        element:<About/>,
-    },
-    {
-        path:"/contact",
-        element:<Contact/>
     },
 ]) 
 
