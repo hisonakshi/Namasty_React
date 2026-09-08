@@ -1,6 +1,7 @@
 import { RestauntCard } from "./Restaurant";
 import { useState, useEffect } from "react";
 import { Shimmer } from "./Shimmer";
+import { Link } from "react-router-dom";
 
 export const Body = () => {
     //For filtering top rated restaurant 
@@ -18,12 +19,12 @@ export const Body = () => {
 
     const fetchData = async () => {
         const data = await fetch(
-            "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.2453332&lng=77.8645651&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+            "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.6340537&lng=77.4455928&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
         );
 
         const json = await data.json();
 
-        console.log(json);
+        // console.log(json);
 
         // setListOfRestaurant(json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants)
         // setFilterRestaurant(json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants)
@@ -61,27 +62,20 @@ export const Body = () => {
 
                 </div>
 
-            <button
-                className="filter-btn" onClick={() => {
+            <button  className="filter-btn" onClick={() => {
                     const filterRestaurant = listOfRestaurant.filter(
-                        (res) => res.info.avgRating > 4
-                    );
+                        (res) => res.info.avgRating > 4 );
 
                     setFilterRestaurant(filterRestaurant);
                 }}
-            >
-                Top rated Restaurant
-            </button>
-
-
+                > Top rated Restaurant </button>
         </div>
 
             <div className="res-container">
                 {filteredRestaurant.map((restaurant) => (
-                    <RestauntCard
-                        resData={restaurant}
-                        key={restaurant.info.id}
-                    />
+                    <Link className="restaurant-link" to={"/restaurants/" + restaurant.info.id} key={restaurant.info.id} >
+                    <RestauntCard resData={restaurant} />
+                    </Link>
                 ))}
             </div>
 
