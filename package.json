@@ -17,11 +17,16 @@
   "license": "ISC",
   "author": "Sonakshi Agrawal",
   "type": "commonjs",
-  "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "start": "parcel SwiggyProject/index.html",
+    "build": "parcel build SwiggyProject/index.html"
   },
   "devDependencies": {
     "parcel": "^2.16.4"
+  },
+  "dependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-router-dom": "^6.30.6"
   }
 }
